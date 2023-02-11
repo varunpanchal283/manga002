@@ -75,14 +75,24 @@ function extractCBZup(file) {
     display: block;
     margin: 0 auto;
 }
-
+body {background-color: black;}
+.float-button1 {
+   position: fixed;
+   top: 10px;
+   right: 50px;
+}
+.float-button2 {
+   position: fixed;
+   top: 10px;
+   right: 20px;
+}
 </style>
 </head>
 <body>
     <input type="file" onchange="extractCBZup(this.files[0])">
 <button id="load" onclick="extractCBZ()">Load CBZ</button>
-  <button id="increase-button">Increase Width</button>
-    <button id="decrease-button">Decrease Width</button>
+  <button id="increase-button" class="float-button1">+</button>
+    <button id="decrease-button" class="float-button2">-</button>
   <div id="images" style='max-width: 100%;'></div>
   <script>
     // Get the increase button
